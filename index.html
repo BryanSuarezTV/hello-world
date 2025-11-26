@@ -1,18 +1,93 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-  <title>my-first-website</title>
-  <LINK href="styles.css" rel="stylesheet" type="text/css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Business Coach - Your Personal Growth Partner</title>
+    <link href="styles.css" rel="stylesheet" type="text/css">
 </head>
-
 <body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="app-header">
+            <div class="header-content">
+                <h1>🎯 AI Business Coach</h1>
+                <p class="tagline">Your Personal Growth & Strategy Partner</p>
+            </div>
+            <div class="header-actions">
+                <button id="newSessionBtn" class="btn-icon" title="New Session">
+                    <span>🔄</span>
+                </button>
+                <button id="historyBtn" class="btn-icon" title="View History">
+                    <span>📚</span>
+                </button>
+            </div>
+        </header>
 
-<img src="https://octodex.github.com/images/daftpunktocat-thomas.gif" id="octocat" alt="octocat-gif" />
+        <!-- Main Chat Area -->
+        <main class="chat-container">
+            <!-- Welcome Screen -->
+            <div id="welcomeScreen" class="welcome-screen">
+                <div class="welcome-content">
+                    <h2>Welcome to Your AI Business Coach</h2>
+                    <p>I'm here to help you:</p>
+                    <ul class="welcome-features">
+                        <li>📊 Measure and improve your business performance</li>
+                        <li>🚀 Grow as a leader and entrepreneur</li>
+                        <li>💡 Overcome challenges specific to you and your industry</li>
+                        <li>📖 Apply proven frameworks from top business books</li>
+                    </ul>
+                    <div class="quick-start">
+                        <h3>Quick Start Topics:</h3>
+                        <div class="topic-buttons">
+                            <button class="topic-btn" data-topic="strategy">Business Strategy</button>
+                            <button class="topic-btn" data-topic="leadership">Leadership Growth</button>
+                            <button class="topic-btn" data-topic="metrics">Metrics & KPIs</button>
+                            <button class="topic-btn" data-topic="scaling">Scaling Challenges</button>
+                            <button class="topic-btn" data-topic="productivity">Productivity</button>
+                            <button class="topic-btn" data-topic="marketing">Marketing & Sales</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-<!-- Change this code here by copy and pasting your template on line 15 -->
-<p>Welcome to your first GitHub Pages website!</p>
+            <!-- Chat Messages -->
+            <div id="chatMessages" class="chat-messages"></div>
+        </main>
 
+        <!-- Input Area -->
+        <div class="input-container">
+            <div class="input-wrapper">
+                <button id="voiceBtn" class="btn-voice" title="Voice Input">
+                    <span id="voiceIcon">🎤</span>
+                </button>
+                <textarea
+                    id="messageInput"
+                    placeholder="Ask me about growing your business, leadership, or specific challenges you're facing..."
+                    rows="1"
+                ></textarea>
+                <button id="sendBtn" class="btn-send" title="Send Message">
+                    <span>📤</span>
+                </button>
+            </div>
+            <div class="input-hint">
+                💡 Try: "How do I measure product-market fit?" or "Help me with time management as a founder"
+            </div>
+        </div>
+    </div>
+
+    <!-- History Modal -->
+    <div id="historyModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Conversation History</h2>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body" id="historyList"></div>
+        </div>
+    </div>
+
+    <script src="knowledge-base.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>
